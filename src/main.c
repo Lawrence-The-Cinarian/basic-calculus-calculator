@@ -6,7 +6,7 @@ int main(void)
 {
   do
   {
-    Differentiate problem[100];
+    Differentiate problem;
     int option = 0;
     char symbol = '\0';
     
@@ -28,7 +28,7 @@ int main(void)
         powerbyconstant(&problem);
         for(int i = 0; i < problem.monomials; i++)
         {
-          printf("New Monomial: %dx^%d\n ", problem[i]. coefficient, problem[i].power);
+          printf("New Monomial: %dx^%d\n ", problem.monomials[i].coefficient, problem.monomials[i].power);
           puts("");
         }
         printf("Would you like to continue? Y[es] or N[o]: ");
