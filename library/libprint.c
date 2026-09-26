@@ -25,7 +25,6 @@ int differentiation(Differentiate *problem)
     scanf("%d", &problem->monomials[i].coefficient);
     puts("");
   }
-
   return 0;
 }
 

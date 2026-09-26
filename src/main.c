@@ -27,12 +27,29 @@ int main(void)
         {
           int derivCoeff = powerbycoefficient(&problem.monomials[i]);
           int derivPower = powerbyconstant(&problem.monomials[i]);
-          printf("New Derivative: %dx^%d\n", derivCoeff, derivPower);
           if(derivPower == 0)
           {
             printf("Please the second to the last and use this\nNew Derivative: %d\n", derivCoeff);
+            break;
           }
+          printf("New Derivative: %dx^%d\n", derivCoeff, derivPower)
         }
+            FILE *open_file;
+            open_file = fopen("calculus.txt", "a");
+            if(open_file == NULL)
+            {
+            puts("Error opening file");
+            return 1;
+            }
+            for(int i = 0; i < problem->count; i++)
+            {
+              fprintf(open_file, "New Derivative: %dx^%d\n\n", derivCoeff, derivPower);
+             }
+             
+             fclose(open_file);
+             puts("");
+             puts("Saved to calculcus.txt");
+        
         break;
 
       case 2:
@@ -43,12 +60,30 @@ int main(void)
           int defaulter = problem1.monomials[i].coefficient;
           int integralCoeff = addPowerAndConstant(&problem1.monomials[i]);
           int integralPower = overAddedPowerAndConstant(&problem1.monomials[i]);
-          printf("New Integral: (%dx^%d)/%d\n", defaulter, integralPower, integralCoeff);
+          
           if(integralPower == 1)
           {
             printf("New Integral: C\n");
             break;
           }
+          
+          printf("New Integral: (%dx^%d)/%d\n\n", defaulter, integralPower, integralCoeff);
+          
+          FILE *open_file;
+            open_file = fopen("calculus.txt", "a");
+            if(open_file == NULL)
+            {
+            puts("Error opening file");
+            return 1;
+            }
+            for(int i = 0; i < problem->count; i++)
+            {
+              fprintf(open_file, "New Derivative: %dx^%d\n\n", derivCoeff, derivPower);
+             }
+             
+             fclose(open_file);
+             puts("");
+             puts("Saved to calculcus.txt");
         }
         break;
 
