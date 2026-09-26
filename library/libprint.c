@@ -10,30 +10,20 @@ void printsmenu()
   puts("(3) Exit");
 }
 
-
-
-int differentiation()
+void differentiation(Differentiate *problem)
 {
-  Monomial *replace;
-  Differentiate *replace
-  
   printf("Enter the number of monomials you want to calculate: ");
-  scanf("%d", &replace->monomials);
- for(int i = 0; i < replace->count; i++)
-{
-  printf("Enter power for monomial %d: ", i+1);
-  scanf("%d", &replace->monomials[i].power);
-  
-  printf("Enter coefficient for monomial %d: ", i+1);
-  scanf("%d", &replace->monomials[i].coefficient);
-  
-  replace->count++;
+  scanf("%d", &problem->count);
+
+  for(int i = 0; i < problem->count; i++)
+  {
+    printf("Enter power for monomial %d: ", i+1);
+    scanf("%d", &problem->monomials[i].power);
+
+    printf("Enter coefficient for monomial %d: ", i+1);
+    scanf("%d", &problem->monomials[i].coefficient);
+  }
 }
-
-  return 0;
-}
-
-
 
 int integration()
 {
