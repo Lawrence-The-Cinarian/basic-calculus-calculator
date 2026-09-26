@@ -7,8 +7,8 @@ int main(void)
   do
   {
     Differentiate problem;
+    problem = 0;
     int option = 0;
-    int i = 0;
     char symbol = '\0';
     
     
@@ -27,7 +27,7 @@ int main(void)
         differentiation();
         int powerbycoefficient(&problem);
         int powerbyconstant(&problem);
-        while(i < problem.monomials)
+        while(int i = 0; i < problem.monomials; i++)
         {
           printf("New Monomial: %dx^%d\n ", problem[i]. coefficient, problem[i].power);
           puts("");
