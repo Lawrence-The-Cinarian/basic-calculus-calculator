@@ -15,9 +15,6 @@ void printsmenu()
 int differentiation()
 {
   Differentiate *replace;
-  replace->monomials = 0
-  replace->monomials.power = 0;
-  replace->monomials.coefficient = 0;
   int i = 0;
   
   

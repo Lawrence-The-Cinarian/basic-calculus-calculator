@@ -1,8 +1,7 @@
 #include "differential.h"
-
 #define CONSTANT 1
 
-int powerbycoefficient(Differentiate *replace)
+int powerbycoefficient(Monomial *replace)
 {
   int answer = replace->power * replace->coefficient;
   return answer;
@@ -10,7 +9,7 @@ int powerbycoefficient(Differentiate *replace)
 
 
 
-int powerbyconstant(Differentiate *replace)
+int powerbyconstant(Monomial *replace)
 {
   int answer = replace->power - CONSTANT;
   return answer;
