@@ -13,13 +13,13 @@ int main(void)
     char symbol = '\0';
     int derivCoeff, derivPower, defaulter, integralPower, integralCoeff;
     char name = 'C';
-
+    
+    
     puts("");
     printsmenu();
     puts("");
     printf("Enter from the option above, the number: ");
     scanf("%d", &option);
-
     switch(option)
     {
       case 1:
@@ -35,10 +35,10 @@ int main(void)
           {
               printf("New Derivative: %d\n", derivCoeff);
               differential_file = fopen("differential.txt", "a");
-      	      if(differential_file == NULL)
-       	       {
-  	       	    puts("Error opening file");
-       	        return 1;
+              if(differential_file == NULL)
+              {
+                puts("Error opening file");
+                return 1;
                }
                fprintf(differential_file, "New Derivative: %d\n\n", derivCoeff);
                fprintf(differential_file, "____________________________________________________________________________________________\n");
@@ -47,9 +47,9 @@ int main(void)
           }
       }
       puts("Saved to differential.txt");
-
+      
       break;
-
+      
       case 2:
         puts("");
         FILE *integral_file;
@@ -74,18 +74,19 @@ int main(void)
            fclose(integral_file);
            continue;
              }
+        }
         puts("Saved to integral.txt");
-
+        
         break;
-
+        
       case 3:
       return 0;
-
+      
       default:
         puts("");
         puts("invalid option");
     }
-
+    
     puts("");
     printf("Would you like to continue? Y[es] or N[o]: ");
     scanf(" %c", &symbol);
