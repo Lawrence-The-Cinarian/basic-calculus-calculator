@@ -10,7 +10,7 @@ void printsmenu()
   puts("(3) Exit");
 }
 
-void differentiation(Differentiate *problem)
+int differentiation(Differentiate *problem)
 {
   printf("Enter the number of monomials you want to calculate: ");
   scanf("%d", &problem->count);
