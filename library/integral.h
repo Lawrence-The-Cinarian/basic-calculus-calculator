@@ -11,7 +11,7 @@ typedef struct {
   int count;
 } Integrate;
 
-int addPowerAndConstant(Monomial *replace);
-int overAddedPowerAndConstant(Monomial *replace);
+int addPowerAndConstant(Monomial1 *replace);
+int overAddedPowerAndConstant(Monomial1 *replace);
 
 #endif
