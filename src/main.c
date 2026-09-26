@@ -12,7 +12,7 @@ int main(void)
     int option = 0;
     char symbol = '\0';
     int derivCoeff, derivPower, defaulter, integralPower, integralCoeff;
-
+    
     puts("");
     printsmenu();
     puts("");
@@ -23,6 +23,7 @@ int main(void)
     {
       case 1:
         puts("");
+        FILE *differential_file;
         differentiation(&problem);
         for(int i = 0; i < problem.count; i++)
         {
@@ -34,8 +35,8 @@ int main(void)
             break;
           }
           printf("New Derivative: %dx^%d\n", derivCoeff, derivPower);
-
-            FILE *differential_file;
+          
+            
             differential_file = fopen("differential.txt", "a");
             if(differential_file == NULL)
             {
@@ -46,16 +47,17 @@ int main(void)
             {
               fprintf(differential_file, "New Derivative: %dx^%d\n\n", derivCoeff, derivPower);
              }
-
+             
              fclose(differential_file);
              puts("");
           }
              puts("Saved to calculcus.txt");
-
+             
        break;
-
+       
       case 2:
         puts("");
+        FILE *integral_file;
         integration(&problem1);
         for(int i = 0; i < problem1.count; i++)
         {
@@ -63,8 +65,8 @@ int main(void)
           integralCoeff = addPowerAndConstant(&problem1.monomials[i]);
           integralPower = overAddedPowerAndConstant(&problem1.monomials[i]);
           printf("New Integral: (%dx^%d)/%d\n", defaulter, integralPower, integralCoeff);
+        }
           puts("Constant: C");
-	    FILE *integral_file;
             integral_file = fopen("integral.txt", "a");
             if(integral_file == NULL)
             {
@@ -75,22 +77,19 @@ int main(void)
             {
               fprintf(integral_file, "New Derivative: %dx^%d/%d\n\n", defaulter, integralPower, integralCoeff);
              }
-
              fclose(integral_file);
              puts("");
-          }
              puts("Saved to calculcus.txt");
-
         break;
-
+        
       case 3:
       return 0;
-
+      
       default:
         puts("");
         puts("invalid option");
     }
-
+    
     puts("");
     printf("Would you like to continue? Y[es] or N[o]: ");
     scanf(" %c", &symbol);
