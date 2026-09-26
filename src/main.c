@@ -65,7 +65,7 @@ int main(void)
           {
             printf("New Integral: C\n");
             break;
-          }
+          
           
           printf("New Integral: (%dx^%d)/%d\n\n", defaulter, integralPower, integralCoeff);
           
@@ -84,6 +84,7 @@ int main(void)
              fclose(open_file);
              puts("");
              puts("Saved to calculcus.txt");
+        }
         }
         break;
 
