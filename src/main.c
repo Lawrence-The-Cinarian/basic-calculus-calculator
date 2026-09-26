@@ -11,6 +11,7 @@ int main(void)
     problem.count = 0;
     int option = 0;
     char symbol = '\0';
+    int derivCoeff, derivPower, defaulter, integralPower, integralCoeff;
 
     puts("");
     printsmenu();
@@ -25,31 +26,32 @@ int main(void)
         differentiation(&problem);
         for(int i = 0; i < problem.count; i++)
         {
-          int derivCoeff = powerbycoefficient(&problem.monomials[i]);
-          int derivPower = powerbyconstant(&problem.monomials[i]);
+          derivCoeff = powerbycoefficient(&problem.monomials[i]);
+          derivPower = powerbyconstant(&problem.monomials[i]);
           if(derivPower == 0)
           {
             printf("New Derivative: %d\n", derivCoeff);
             break;
           }
           printf("New Derivative: %dx^%d\n", derivCoeff, derivPower);
-          
-            FILE *open_file;
-            open_file = fopen("calculus.txt", "a");
-            if(open_file == NULL)
+
+            FILE *differential_file;
+            differential_file = fopen("differential.txt", "a");
+            if(differential_file == NULL)
             {
             puts("Error opening file");
             return 1;
             }
             for(int i = 0; i < problem.count; i++)
             {
-              fprintf(open_file, "New Derivative: %dx^%d\n\n", derivCoeff, derivPower);
+              fprintf(differential_file, "New Derivative: %dx^%d\n\n", derivCoeff, derivPower);
              }
-             
-             fclose(open_file);
+
+             fclose(differential_file);
              puts("");
-             puts("Saved to calculcus.txt");
           }
+             puts("Saved to calculcus.txt");
+
        break;
 
       case 2:
@@ -57,34 +59,28 @@ int main(void)
         integration(&problem1);
         for(int i = 0; i < problem1.count; i++)
         {
-          int defaulter = problem1.monomials[i].coefficient;
-          int integralCoeff = addPowerAndConstant(&problem1.monomials[i]);
-          int integralPower = overAddedPowerAndConstant(&problem1.monomials[i]);
-          
-          if(integralPower == 1)
-          {
-            printf("New Integral: C\n");
-            break;
-          }
-          printf("New Integral: (%dx^%d)/%d\n\n", defaulter, integralPower, integralCoeff);
-          
-          FILE *open_file;
-            open_file = fopen("calculus.txt", "a");
-            if(open_file == NULL)
+          defaulter = problem1.monomials[i].coefficient;
+          integralCoeff = addPowerAndConstant(&problem1.monomials[i]);
+          integralPower = overAddedPowerAndConstant(&problem1.monomials[i]);
+          printf("New Integral: (%dx^%d)/%d\n", defaulter, integralPower, integralCoeff);
+          puts("Constant: C");
+	    FILE *integral_file;
+            integral_file = fopen("integral.txt", "a");
+            if(integral_file == NULL)
             {
             puts("Error opening file");
             return 1;
             }
             for(int i = 0; i < problem.count; i++)
             {
-              fprintf(open_file, "New Derivative: %dx^%d\n\n", integralCoeff, integralPower);
+              fprintf(integral_file, "New Derivative: %dx^%d/%d\n\n", defaulter, integralPower, integralCoeff);
              }
-             
-             fclose(open_file);
+
+             fclose(integral_file);
              puts("");
+          }
              puts("Saved to calculcus.txt");
-        
-        }
+
         break;
 
       case 3:
@@ -94,7 +90,7 @@ int main(void)
         puts("");
         puts("invalid option");
     }
-    
+
     puts("");
     printf("Would you like to continue? Y[es] or N[o]: ");
     scanf(" %c", &symbol);
