@@ -21,9 +21,9 @@ int differentiation(Differentiate *problem)
     printf("Enter power for monomial %d: ", i+1);
     scanf("%d", &problem->monomials[i].power);
 
-    puts("");
     printf("Enter coefficient for monomial %d: ", i+1);
     scanf("%d", &problem->monomials[i].coefficient);
+    puts("");
   }
 
   return 0;
@@ -40,9 +40,9 @@ int integration(Integrate *problem)
     printf("Enter power for monomial %d: ", i+1);
     scanf("%d", &problem->monomials[i].power);
     
-    puts("");
     printf("Enter coefficient for monomial %d: ", i+1);
     scanf("%d", &problem->monomials[i].coefficient);
+    puts("");
   }
   return 0;
 }
