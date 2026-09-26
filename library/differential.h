@@ -9,7 +9,7 @@ typedef struct
 
 typedef struct
 {
-  Monomials monomials[100]
+  Monomials monomials[100];
   int count;
 } Differentiate;
 
