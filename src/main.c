@@ -29,11 +29,11 @@ int main(void)
           int derivPower = powerbyconstant(&problem.monomials[i]);
           if(derivPower == 0)
           {
-            printf("Please the second to the last and use this\nNew Derivative: %d\n", derivCoeff);
+            printf("New Derivative: %d\n", derivCoeff);
             break;
           }
           printf("New Derivative: %dx^%d\n", derivCoeff, derivPower);
-        
+          
             FILE *open_file;
             open_file = fopen("calculus.txt", "a");
             if(open_file == NULL)
@@ -66,7 +66,6 @@ int main(void)
             printf("New Integral: C\n");
             break;
           }
-          
           printf("New Integral: (%dx^%d)/%d\n\n", defaulter, integralPower, integralCoeff);
           
           FILE *open_file;
