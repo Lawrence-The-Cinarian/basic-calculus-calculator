@@ -6,7 +6,7 @@ int main(void)
 {
   do
   {
-    Differentiate problem;
+    Differentiate problem[100];
     int option = 0;
     char symbol = '\0';
     
