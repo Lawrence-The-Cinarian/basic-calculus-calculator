@@ -14,7 +14,8 @@ void printsmenu()
 
 int differentiation()
 {
-  Differentiate *replace;
+  Monomial *replace;
+  Differentiate *replace
   
   printf("Enter the number of monomials you want to calculate: ");
   scanf("%d", &replace->monomials);

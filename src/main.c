@@ -6,6 +6,7 @@ int main(void)
 {
   do
   {
+    Differentiate problem;
     Monomial problem;
     int option = 0;
     char symbol = '\0';
