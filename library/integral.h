@@ -4,10 +4,10 @@
 typedef struct {
   int power;
   int coefficient;
-} Monomial;
+} Monomial1;
 
 typedef struct {
-  Monomial monomials[100];
+  Monomial1 monomials[100];
   int count;
 } Integrate;
 

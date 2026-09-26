@@ -39,7 +39,7 @@ int main(void)
         integration(&problem1);
         for(int i = 0; i < problem1.count; i++)
         {
-          int defaulter = &problem1.monomials[i];
+          int defaulter = problem1.monomials[i];
           int integralCoeff = addPowerAndConstant(&problem1.monomials[i]);
           int integralPower = overAddedPowerAndConstant(&problem1.monomials[i]);
           printf("New Integral: (%dx^%d)/%d\n", defaulter, integralPower, integralCoeff);
