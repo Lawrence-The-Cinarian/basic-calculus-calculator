@@ -3,6 +3,6 @@
 
 void printsmenu();
 int differentiation(Differentiate *problem);
-int integration();
+int integration(Integrate *problem);
 
 #endif

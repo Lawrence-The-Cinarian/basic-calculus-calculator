@@ -8,7 +8,6 @@ int powerbycoefficient(Monomial *replace)
 }
 
 
-
 int powerbyconstant(Monomial *replace)
 {
   int answer = replace->power - CONSTANT;

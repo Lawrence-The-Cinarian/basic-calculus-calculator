@@ -7,6 +7,7 @@ int main(void)
   do
   {
     Differentiate problem;
+    Integrate problem1;
     problem.count = 0;
     int option = 0;
     char symbol = '\0';
@@ -25,17 +26,33 @@ int main(void)
         {
           int derivCoeff = powerbycoefficient(&problem.monomials[i]);
           int derivPower = powerbyconstant(&problem.monomials[i]);
-          printf("Derivative: %dx^%d\n", derivCoeff, derivPower);
+          printf("New Derivative: %dx^%d\n", derivCoeff, derivPower);
+          if(derivPower == 0)
+          {
+            printf("New Derivative: %d\n", derivCoeff);
+          }
         }
         break;
 
       case 2:
         puts("");
-        integration();
+        integration(&problem1);
+        for(int i = 0; i < problem1.count; i++)
+        {
+          int defaulter = &problem1.monomials[i];
+          int integralCoeff = addPowerAndConstant(&problem1.monomials[i]);
+          int integralPower = overAddedPowerAndConstant(&problem1.monomials[i]);
+          printf("New Integral: (%dx^%d)/%d\n", defaulter, integralPower, integralCoeff);
+          if(integralPower == 1)
+          {
+            printf("New Integral: C\n");
+            break;
+          }
+        }
         break;
 
       case 3:
-        return 0;
+      return 0;
 
       default:
         puts("");
