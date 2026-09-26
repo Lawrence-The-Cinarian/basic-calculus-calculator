@@ -1,18 +1,15 @@
 #ifndef DIFFERENTIAL_H
 #define DIFFERENTIAL_H
 
-typedef struct
-{
+typedef struct {
   int power;
   int coefficient;
-} Monomials;
+} Monomial;
 
-typedef struct
-{
-  Monomials monomials[100];
+typedef struct {
+  Monomial monomials[100];
   int count;
 } Differentiate;
-
 
 
 int powerbycoefficient(Differentiate *replace);
