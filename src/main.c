@@ -32,8 +32,8 @@ int main(void)
             printf("Please the second to the last and use this\nNew Derivative: %d\n", derivCoeff);
             break;
           }
-          printf("New Derivative: %dx^%d\n", derivCoeff, derivPower)
-        }
+          printf("New Derivative: %dx^%d\n", derivCoeff, derivPower);
+        
             FILE *open_file;
             open_file = fopen("calculus.txt", "a");
             if(open_file == NULL)
@@ -49,8 +49,8 @@ int main(void)
              fclose(open_file);
              puts("");
              puts("Saved to calculcus.txt");
-        
-        break;
+          }
+       break;
 
       case 2:
         puts("");
@@ -65,7 +65,7 @@ int main(void)
           {
             printf("New Integral: C\n");
             break;
-          
+          }
           
           printf("New Integral: (%dx^%d)/%d\n\n", defaulter, integralPower, integralCoeff);
           
@@ -84,7 +84,7 @@ int main(void)
              fclose(open_file);
              puts("");
              puts("Saved to calculcus.txt");
-        }
+        
         }
         break;
 
