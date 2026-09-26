@@ -41,7 +41,7 @@ int main(void)
             puts("Error opening file");
             return 1;
             }
-            for(int i = 0; i < problem->count; i++)
+            for(int i = 0; i < problem.count; i++)
             {
               fprintf(open_file, "New Derivative: %dx^%d\n\n", derivCoeff, derivPower);
              }
@@ -76,9 +76,9 @@ int main(void)
             puts("Error opening file");
             return 1;
             }
-            for(int i = 0; i < problem->count; i++)
+            for(int i = 0; i < problem.count; i++)
             {
-              fprintf(open_file, "New Derivative: %dx^%d\n\n", derivCoeff, derivPower);
+              fprintf(open_file, "New Derivative: %dx^%d\n\n", integralCoeff, integralPower);
              }
              
              fclose(open_file);
