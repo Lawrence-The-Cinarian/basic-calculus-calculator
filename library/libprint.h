@@ -2,7 +2,7 @@
 #define LIBPRINT_H
 
 void printsmenu();
-int differentiation();
+int differentiation(Differentiate *problem);
 int integration();
 
 #endif

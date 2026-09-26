@@ -23,6 +23,8 @@ int differentiation(Differentiate *problem)
     printf("Enter coefficient for monomial %d: ", i+1);
     scanf("%d", &problem->monomials[i].coefficient);
   }
+
+  return 0;
 }
 
 int integration()
