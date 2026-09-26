@@ -7,7 +7,6 @@ int main(void)
   do
   {
     Differentiate problem;
-    problem = 0;
     int option = 0;
     char symbol = '\0';
     
