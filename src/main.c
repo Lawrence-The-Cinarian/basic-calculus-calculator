@@ -27,9 +27,9 @@ int main(void)
         differentiation();
         int powerbycoefficient(&problem);
         int powerbyconstant(&problem);
-        while(i < &problem)
+        while(i < problem.monomials)
         {
-          printf("New Monomial: %dx^%d\n ", problem[i]->coefficient, problem[i]->power);
+          printf("New Monomial: %dx^%d\n ", problem[i]. coefficient, problem[i].power);
           puts("");
         }
         printf("Would you like to continue? Y[es] or N[o]: ");

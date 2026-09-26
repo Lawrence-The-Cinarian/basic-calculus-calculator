@@ -1,4 +1,4 @@
-#include "libprint.h"
+#include "calculus.h"
 #include <stdio.h>
 
 void printsmenu()
@@ -14,20 +14,21 @@ void printsmenu()
 
 int differentiation()
 {
-  int monomials = 0
-  int power = 0;
-  int coefficient = 0;
+  Differentiate *replace;
+  replace->monomials = 0
+  replace->power = 0;
+  replace->coefficient = 0;
   int i = 0;
   
   
   printf("Enter the number of monomials you want to calculate: ");
-  scanf("%d", &monomials);
-  while(i < monomials)
+  scanf("%d", &replace->monomials);
+  while(i < replace->monomials)
   {
-    printf("Enter the power for variable x for %d: ", power[i]);
-    scanf("%d", &power[i]);
-    printf("Enter coefficient for variable x for %d", coefficient[i]);
-    scanf("%d", &coefficient[i]);
+    printf("Enter the power for variable x for %d: ", replace[i]->power);
+    scanf("%d", &replace[i]->power);
+    printf("Enter coefficient for variable x for %d", replace[i]->coefficient);
+    scanf("%d", &replace[i]->coefficient);
   }
   return 0;
 }

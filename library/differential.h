@@ -9,6 +9,6 @@ typedef struct
 } Differentiate;
 
 int powerbycoefficient(Differentiate *replace);
-int powerbyconstant(Differentiat *replace);
+int powerbyconstant(Differentiate *replace);
 
 #endif
