@@ -24,8 +24,8 @@ int main(void)
       {
         puts("");
         differentiation();
-        int powerbycoefficient(&problem);
-        int powerbyconstant(&problem);
+        powerbycoefficient(&problem);
+        powerbyconstant(&problem);
         for(int i = 0; i < problem.monomials; i++)
         {
           printf("New Monomial: %dx^%d\n ", problem[i]. coefficient, problem[i].power);

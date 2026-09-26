@@ -6,7 +6,7 @@ typedef struct
   int monomials;
   int power;
   int coefficient;
-} Differentiate[100];
+} Differentiate;
 
 int powerbycoefficient(Differentiate *replace);
 int powerbyconstant(Differentiate *replace);
