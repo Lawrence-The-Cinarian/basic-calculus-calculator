@@ -21,6 +21,7 @@ int main(void)
     switch(option)
     {
       case 1:
+        puts("");
         differentiation(&problem);
         for(int i = 0; i < problem.count; i++)
         {
@@ -29,7 +30,7 @@ int main(void)
           printf("New Derivative: %dx^%d\n", derivCoeff, derivPower);
           if(derivPower == 0)
           {
-            printf("New Derivative: %d\n", derivCoeff);
+            printf("Please the second to the last and use this\nNew Derivative: %d\n", derivCoeff);
           }
         }
         break;
@@ -58,7 +59,8 @@ int main(void)
         puts("");
         puts("invalid option");
     }
-
+    
+    puts("");
     printf("Would you like to continue? Y[es] or N[o]: ");
     scanf(" %c", &symbol);
     if(!(symbol == 'Y' || symbol == 'y'))

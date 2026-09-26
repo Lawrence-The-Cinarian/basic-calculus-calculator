@@ -17,9 +17,11 @@ int differentiation(Differentiate *problem)
 
   for(int i = 0; i < problem->count; i++)
   {
+    puts("");
     printf("Enter power for monomial %d: ", i+1);
     scanf("%d", &problem->monomials[i].power);
 
+    puts("");
     printf("Enter coefficient for monomial %d: ", i+1);
     scanf("%d", &problem->monomials[i].coefficient);
   }
@@ -34,9 +36,11 @@ int integration(Integrate *problem)
 
   for(int i = 0; i < problem->count; i++)
   {
+    puts("");
     printf("Enter power for monomial %d: ", i+1);
     scanf("%d", &problem->monomials[i].power);
-
+    
+    puts("");
     printf("Enter coefficient for monomial %d: ", i+1);
     scanf("%d", &problem->monomials[i].coefficient);
   }
