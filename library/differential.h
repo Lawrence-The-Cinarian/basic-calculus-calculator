@@ -12,7 +12,7 @@ typedef struct {
 } Differentiate;
 
 
-int powerbycoefficient(Differentiate *replace);
-int powerbyconstant(Differentiate *replace);
+int powerbycoefficient(Monomial *replace);
+int powerbyconstant(Monomial *replace);
 
 #endif

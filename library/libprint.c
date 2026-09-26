@@ -19,7 +19,7 @@ int differentiation()
   
   
   printf("Enter the number of monomials you want to calculate: ");
-  scanf("%d", replace->monomials);
+  scanf("%d", &replace->monomials);
  for(int i = 0; i < replace->count; i++)
 {
   printf("Enter power for monomial %d: ", i+1);
