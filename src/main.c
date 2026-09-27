@@ -13,8 +13,8 @@ int main(void)
     char symbol = '\0';
     int derivCoeff, derivPower, defaulter, integralPower, integralCoeff;
     char name = 'C';
-    
-    
+
+
     puts("");
     printsmenu();
     puts("");
@@ -47,9 +47,8 @@ int main(void)
           }
       }
       puts("Saved to differential.txt");
-      
       break;
-      
+
       case 2:
         puts("");
         FILE *integral_file;
@@ -76,17 +75,16 @@ int main(void)
              }
         }
         puts("Saved to integral.txt");
-        
         break;
-        
+
       case 3:
       return 0;
-      
+
       default:
         puts("");
         puts("invalid option");
     }
-    
+
     puts("");
     printf("Would you like to continue? Y[es] or N[o]: ");
     scanf(" %c", &symbol);
