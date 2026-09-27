@@ -30,7 +30,7 @@ int main(void)
         {
           derivCoeff = powerbycoefficient(&problem.monomials[i]);
           derivPower = powerbyconstant(&problem.monomials[i]);
-          printf("New Derivative: %d^%d\n", derivCoeff, derivPower);
+          printf("New Derivative: %dx^%d\n", derivCoeff, derivPower);
           if(derivPower == 0)
           {
               printf("New Derivative: %d\n", derivCoeff);
@@ -40,12 +40,12 @@ int main(void)
                 puts("Error opening file");
                 return 1;
                }
-               fprintf(differential_file, "New Derivative: %d\n\n", derivCoeff);
+               fprintf(differential_file, "New Derivative: %dx^%d\n\n", derivCoeff, derivPower);
                fprintf(differential_file, "____________________________________________________________________________________________\n");
-               fclose(differential_file);
           	   continue;
           }
       }
+      fclose(differential_file);
       puts("Saved to differential.txt");
       break;
 
